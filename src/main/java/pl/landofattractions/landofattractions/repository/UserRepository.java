@@ -1,0 +1,8 @@
+package pl.landofattractions.landofattractions.repository;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+import pl.landofattractions.landofattractions.model.User;
+
+@Repository
+public interface UserRepository extends CrudRepository<User, Long> {}
