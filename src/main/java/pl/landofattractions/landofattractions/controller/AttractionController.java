@@ -20,9 +20,14 @@ public class AttractionController {
         return (List<Attraction>) attractionRepository.findAll();
     }
 
-    @GetMapping("/attractions/city/{name}")
-    public List<Attraction> getAttractionsByCity(@PathVariable("name") String name) {
-        return (List<Attraction>) attractionRepository.findAllByCity(name);
+//    @GetMapping("/attractions/place/{id}")
+//    public List<Attraction> getAttractionsByCity(@PathVariable("id") long id) {
+//        return (List<Attraction>) attractionRepository.findAllByPlaceId(id);
+//    }
+
+    @GetMapping("/attractions/{id}")
+    public Attraction getAttraction(@PathVariable long id){
+        return attractionRepository.findById(id);
     }
 
     @PostMapping("/attractions")

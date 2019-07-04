@@ -30,4 +30,9 @@ public class UserController {
     void delUser(@PathVariable long id) {
         userRepository.deleteById(id);
     }
+
+    @GetMapping("/users/{id}")
+    User getUser(@PathVariable long id) {
+        return userRepository.findById(id);
+    }
 }

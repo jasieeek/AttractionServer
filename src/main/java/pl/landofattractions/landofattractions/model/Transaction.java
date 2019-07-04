@@ -1,32 +1,31 @@
 package pl.landofattractions.landofattractions.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
+//@Table(name = "transaction")
 public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idTransaction")
     private long id;
-    private String userName;
-    private String attractionName;
-    private String price;
     private int numberOfPeople;
-    private String finalPrice;
-
-
-    public Transaction(String userName, String attractionName, String price, int numberOfPeople, String finalPrice) {
-        this.userName = userName;
-        this.attractionName = attractionName;
-        this.price = price;
-        this.numberOfPeople = numberOfPeople;
-        this.finalPrice = finalPrice;
-    }
+    private int finalPrice;
+    @OneToOne
+    private User user;
+//    1
+    @OneToMany
+    private List<Attraction> attractions;
+//    2
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "idUser", referencedColumnName = "idUser")
+//    private User user;
 }

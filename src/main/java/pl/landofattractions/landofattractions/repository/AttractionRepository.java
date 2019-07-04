@@ -8,5 +8,7 @@ import java.util.List;
 
 @Repository
 public interface AttractionRepository extends JpaRepository<Attraction, Long> {
-    List<Attraction> findAllByCity(String city);
+//    List<Attraction> findAllByCity(String city);
+    Attraction findById(long id);
+//    List<Attraction> findAllByPlaceId(long id);
 }

@@ -5,15 +5,16 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import pl.landofattractions.landofattractions.model.Attraction;
-import pl.landofattractions.landofattractions.model.City;
+import pl.landofattractions.landofattractions.model.Place;
 import pl.landofattractions.landofattractions.model.Transaction;
 import pl.landofattractions.landofattractions.model.User;
 import pl.landofattractions.landofattractions.repository.AttractionRepository;
-import pl.landofattractions.landofattractions.repository.CityRepository;
+import pl.landofattractions.landofattractions.repository.PlaceRepository;
 import pl.landofattractions.landofattractions.repository.TransactionRepository;
 import pl.landofattractions.landofattractions.repository.UserRepository;
 
-import java.util.stream.Stream;
+import java.util.LinkedList;
+import java.util.List;
 
 @SpringBootApplication
 public class LandofattractionsApplication {
@@ -25,6 +26,7 @@ public class LandofattractionsApplication {
     @Bean
     CommandLineRunner initUsers(UserRepository userRepository) {
         return args -> {
+            // insert users
             User user1 = new User();
             user1.setName("Kamil");
             user1.setSurname("Jasiak");
@@ -40,64 +42,64 @@ public class LandofattractionsApplication {
             userRepository.save(user1);
             userRepository.save(user2);
             userRepository.save(user3);
-            userRepository.findAll().forEach(System.out::println);
         };
     }
 
     @Bean
-    CommandLineRunner initAttractions(AttractionRepository attractionRepository) {
+    CommandLineRunner initPlaces(PlaceRepository placeRepository) {
         return args -> {
-            Attraction atr1 = new Attraction();
-            atr1.setName("Lot balonem");
-            atr1.setCity("Ankara");
-            atr1.setShortDescription("See almost a lot of turkey from the air passing by a lot of other travelers in balloons");
-            atr1.setPrice("1000");
+            //insert places
+            Place place1 = new Place();
+            place1.setCity("Ankara");
+            place1.setCountry("Turkey");
 
-            Attraction atr2 = new Attraction();
-            atr2.setName("Zwiedzanie wieży Eiffla");
-            atr2.setCity("Paris");
-            atr2.setShortDescription("See the most popular place in France, beautiful Eiffel Tower");
-            atr2.setPrice("100");
+            Place place2 = new Place();
+            place2.setCity("Paris");
+            place2.setCountry("France");
 
-            attractionRepository.save(atr1);
-            attractionRepository.save(atr2);
-            attractionRepository.findAll().forEach(System.out::println);
+            Place place3 = new Place();
+            place3.setCity("Spain");
+            place3.setCountry("Madrid");
+
+            placeRepository.save(place1);
+            placeRepository.save(place2);
+            placeRepository.save(place3);
         };
     }
 
     @Bean
-    CommandLineRunner initCities(CityRepository cityRepository) {
+    CommandLineRunner initAttractions(AttractionRepository attractionRepository, PlaceRepository placeRepository) {
         return args -> {
-            City city1 = new City();
-            city1.setName("Ankara");
-            city1.setCountry("Turkey");
+//          insert attraction
+            Attraction a1 = new Attraction();
+            a1.setName("Lot balonem");
+            a1.setShortDescription("Zobacz cala turcje z lotu ptaka!");
+            a1.setPrice(1000);
+            a1.setPlace(placeRepository.findById(1));
 
-            City city2 = new City();
-            city2.setName("Paris");
-            city2.setCountry("France");
+            Attraction a2 = new Attraction();
+            a2.setName("Zwiedzanie Wiezy Eiffel'a");
+            a2.setShortDescription("Zobacz najbardziej popularna francuska budowle!");
+            a2.setPrice(100);
+            a2.setPlace(placeRepository.findById(2));
 
-            City city3 = new City();
-            city3.setName("London");
-            city3.setCountry("England");
-            cityRepository.save(city1);
-            cityRepository.save(city2);
-            cityRepository.save(city3);
-            cityRepository.findAll().forEach(System.out::println);
+            attractionRepository.save(a1);
+            attractionRepository.save(a2);
         };
     }
 
     @Bean
-    CommandLineRunner initTransactions(TransactionRepository transactionRepository) {
+    CommandLineRunner initTransactions(TransactionRepository transactionRepository, UserRepository userRepository, AttractionRepository attractionRepository) {
         return args -> {
+//          insert transaction
             Transaction t1 = new Transaction();
-            t1.setUserName("Kamil Jasiak");
-            t1.setAttractionName("Balloon flight");
-            t1.setPrice("1000");
             t1.setNumberOfPeople(2);
-            t1.setFinalPrice("2000");
+            t1.setFinalPrice(2000);
+            t1.setUser(userRepository.findById(1));
+            List<Attraction> lista = new LinkedList<>(attractionRepository.findAll());
+            t1.setAttractions(lista);
 
             transactionRepository.save(t1);
-            transactionRepository.findAll().forEach(System.out::println);
         };
     }
 }

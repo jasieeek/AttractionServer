@@ -5,18 +5,17 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-//@Table(name = "user")
-public class User {
+//@Table(name = "place")
+public class Place {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idUser")
+    @Column(name = "idPlace")
     private long id;
-    private String name;
-    private String surname;
+    private String city;
+    private String country;
 }
