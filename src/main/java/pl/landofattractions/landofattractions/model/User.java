@@ -19,4 +19,7 @@ public class User {
     private long id;
     private String name;
     private String surname;
+    private String userName;
+    private String password;
+    private String passwordConfirm;
 }

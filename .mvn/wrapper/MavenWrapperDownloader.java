@@ -17,14 +17,14 @@ specific language governing permissions and limitations
 under the License.
 */
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.net.URL;
-import java.nio.channels.Channels;
-import java.nio.channels.ReadableByteChannel;
-import java.util.Properties;
+import.sql java.io.File;
+import.sql java.io.FileInputStream;
+import.sql java.io.FileOutputStream;
+import.sql java.io.IOException;
+import.sql java.net.URL;
+import.sql java.nio.channels.Channels;
+import.sql java.nio.channels.ReadableByteChannel;
+import.sql java.util.Properties;
 
 public class MavenWrapperDownloader {
 

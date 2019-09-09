@@ -24,8 +24,4 @@ public class Transaction {
 //    1
     @OneToMany
     private List<Attraction> attractions;
-//    2
-//    @OneToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "idUser", referencedColumnName = "idUser")
-//    private User user;
 }

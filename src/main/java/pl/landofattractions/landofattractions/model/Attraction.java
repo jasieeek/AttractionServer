@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-//@Table(name = "attraction")
+@Table(name = "attraction")
 public class Attraction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,8 +20,10 @@ public class Attraction {
     private String name;
     private String shortDescription;
     private int price;
+    private double attractiveness;
     @OneToOne
     private Place place;
+
 //    @ManyToOne
 //    @JoinColumn(name = "idTransaction")
 //    private Transaction transaction;

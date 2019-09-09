@@ -7,4 +7,5 @@ import pl.landofattractions.landofattractions.model.Place;
 @Repository
 public interface PlaceRepository extends JpaRepository<Place, Long> {
     Place findById(long id);
+    Place findByCity(String city);
 }
