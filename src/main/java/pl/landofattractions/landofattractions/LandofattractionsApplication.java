@@ -5,14 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import pl.landofattractions.landofattractions.knapsack.MainKnapsack;
-import pl.landofattractions.landofattractions.model.Attraction;
-import pl.landofattractions.landofattractions.model.Place;
-import pl.landofattractions.landofattractions.model.Transaction;
-import pl.landofattractions.landofattractions.model.User;
-import pl.landofattractions.landofattractions.repository.AttractionRepository;
-import pl.landofattractions.landofattractions.repository.PlaceRepository;
-import pl.landofattractions.landofattractions.repository.TransactionRepository;
-import pl.landofattractions.landofattractions.repository.UserRepository;
+import pl.landofattractions.landofattractions.model.*;
+import pl.landofattractions.landofattractions.repository.*;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -23,6 +17,7 @@ public class LandofattractionsApplication {
     public static void main(String[] args) {
         SpringApplication.run(LandofattractionsApplication.class, args);
     }
+
 
     @Bean
     CommandLineRunner initUsers(UserRepository userRepository) {
@@ -52,6 +47,17 @@ public class LandofattractionsApplication {
             userRepository.save(user1);
             userRepository.save(user2);
             userRepository.save(user3);
+        };
+    }
+
+    @Bean
+    CommandLineRunner initSessionUser(UserRepository userRepository, SessionUserRepository sessionUserRepository) {
+        return args -> {
+            SessionUser sessionUser = new SessionUser();
+            sessionUser.setStatus(false);
+            User user = userRepository.findById(1);
+            sessionUser.setUser(user);
+            sessionUserRepository.save(sessionUser);
         };
     }
 
