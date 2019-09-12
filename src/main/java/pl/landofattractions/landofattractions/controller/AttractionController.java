@@ -1,7 +1,6 @@
 package pl.landofattractions.landofattractions.controller;
 
 import org.springframework.web.bind.annotation.*;
-import pl.landofattractions.landofattractions.knapsack.Item;
 import pl.landofattractions.landofattractions.knapsack.MainKnapsack;
 import pl.landofattractions.landofattractions.model.Attraction;
 import pl.landofattractions.landofattractions.repository.AttractionRepository;
@@ -21,7 +20,7 @@ public class AttractionController {
     }
 
     @GetMapping("/attractions/knapsack")
-    public List<Item> getKnapsack(@RequestParam String city, @RequestParam int capacity) {
+    public List<Attraction> getKnapsack(@RequestParam String city, @RequestParam int capacity) {
         MainKnapsack mainKnapsack = new MainKnapsack(attractionRepository, placeRepository);
         return mainKnapsack.returnListAttractions(city, capacity);
     }
@@ -36,10 +35,6 @@ public class AttractionController {
         return (List<Attraction>) attractionRepository.findAll();
     }
 
-//    @GetMapping("/attractions/place/{id}")
-//    public List<Attraction> getAttractionsByCity(@PathVariable("id") long id) {
-//        return (List<Attraction>) attractionRepository.findAllByPlaceId(id);
-//    }
 
     @GetMapping("/attractions/{id}")
     public Attraction getAttraction(@PathVariable long id){

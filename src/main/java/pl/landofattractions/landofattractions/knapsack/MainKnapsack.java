@@ -4,6 +4,7 @@ import pl.landofattractions.landofattractions.model.Attraction;
 import pl.landofattractions.landofattractions.repository.AttractionRepository;
 import pl.landofattractions.landofattractions.repository.PlaceRepository;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -18,7 +19,7 @@ public class MainKnapsack {
       this.placeRepository = placeRepository;
    }
 
-   public List<Item> returnListAttractions(String city, int capacity) {
+   public List<Attraction> returnListAttractions(String city, int capacity) {
 
       List<Attraction> attractionList = attractionRepository.findAllByPlaceId(placeRepository.findByCity(city).getId());
 
@@ -33,12 +34,24 @@ public class MainKnapsack {
          items.add(item);
       }
       
-      List<KnapsackSolver> solvers = new ArrayList<>();
+//      List<KnapsackSolver> solvers = new ArrayList<>();
+//
+//      solvers.add(new KnapsackSolver(items, capacity));
 
-      solvers.add(new KnapsackSolver(items, capacity));
-
+      KnapsackSolver knapsackSolver = new KnapsackSolver(items, capacity);
 //      System.out.println(solvers.get(0).solve());
 
-      return solvers.get(0).solve().items;
+
+      return getAttractions(knapsackSolver.solve().items);
+   }
+
+   private List<Attraction> getAttractions(List<Item> items) {
+      List<Attraction> attractionList = new LinkedList<>();
+
+      for (Item item: items) {
+         attractionList.add(this.attractionRepository.findById(item.label));
+      }
+
+      return attractionList;
    }
 }

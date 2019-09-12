@@ -1,44 +1,173 @@
+-- places
+INSERT INTO place VALUES (1, 'Lion', 'France');
+INSERT INTO place VALUES (2, 'Nantes', 'France');
+INSERT INTO place VALUES (3, 'Marseille', 'France');
+INSERT INTO place VALUES (4, 'Paris', 'France');
+INSERT INTO place VALUES (5, 'Ankara', 'Turkey');
+INSERT INTO place VALUES (6, 'Konya', 'Turkey');
+INSERT INTO place VALUES (7, 'Antayla', 'Turkey');
+INSERT INTO place VALUES (8, 'Madrid', 'Spain');
+INSERT INTO place VALUES (9, 'Barcelona', 'Spain');
+INSERT INTO place VALUES (10, 'Sevilla', 'Spain');
+INSERT INTO place VALUES (11, 'Rome', 'Italy');
+INSERT INTO place VALUES (12, 'London', 'England');
+INSERT INTO place VALUES (13, 'Venice', 'Italy');
+INSERT INTO place VALUES (14, 'Florence', 'Italy');
+INSERT INTO place VALUES (15, 'Sewilla', 'Spain');
+INSERT INTO place VALUES (16, 'Amsterdam', 'Netherland');
+INSERT INTO place VALUES (17, 'Istambuł', 'Turkey');
+INSERT INTO place VALUES (18, 'Athens', 'Greece');
+INSERT INTO place VALUES (19, 'Copenhagen', 'Denmark');
+INSERT INTO place VALUES (20, 'Porto', 'Portugal');
+
 -- attractions
 INSERT INTO attraction VALUES (1, 8.0, 'Eiffel Tower', 20, 'See the most famous tower in Europe', 4);
-
 INSERT INTO attraction VALUES (2, 9.2, 'Balloon flight', 150, 'See the capital of Turkey from a bird''s eye view', 5);
-
 INSERT INTO attraction VALUES (3, 9.0, 'Balloon flight', 100, 'Fly over one of the largest Turkish cities', 6);
-
 INSERT INTO attraction VALUES (4, 7.5, 'Parc Guell', 10, 'See Barcelona''s most magical park', 9);
-
 INSERT INTO attraction VALUES (5, 7.7, 'Museum of European and Mediterranean Civilisations', 20, 'Explore the history of Mediterranean civilization', 3);
-
 INSERT INTO attraction VALUES (6, 6.5, 'Culture Palace', 7, 'See the most famous building in the Polish capital', 11);
-
 INSERT INTO attraction VALUES (7, 7.6, 'Notre Dame', 8, 'Notre Dame is the heart and one of the symbols of Paris', 4);
-
 INSERT INTO attraction VALUES (8, 7.2, 'Luwr', 17, 'The Louvre is the most visited museum in the world', 4);
-
-
--- places (cities)
-INSERT INTO place VALUES (1, 'Lion', 'France');
-
-INSERT INTO place VALUES (2, 'Nantes', 'France');
-
-INSERT INTO place VALUES (3, 'Marseille', 'France');
-
-INSERT INTO place VALUES (4, 'Paris', 'France');
-
-INSERT INTO place VALUES (5, 'Ankara', 'Turkey');
-
-INSERT INTO place VALUES (6, 'Konya', 'Turkey');
-
-INSERT INTO place VALUES (7, 'Antayla', 'Turkey');
-
-INSERT INTO place VALUES (8, 'Madrid', 'Spain');
-
-INSERT INTO place VALUES (9, 'Barcelona', 'Spain');
-
-INSERT INTO place VALUES (10, 'Sevilla', 'Spain');
-
-INSERT INTO place VALUES (11, 'Warsaw', 'Poland');
-
-
-
-
+INSERT INTO attraction VALUES (9, 7.5, 'Big Ben',40,'The famous London clock', 12);
+INSERT INTO attraction VALUES (10, 8.6, 'London Eye', 30, 'Famous Ferris wheel on the river', 12);
+INSERT INTO attraction VALUES (11, 7.9, 'Buckingham Palace', 35, 'Queens residence and government offices', 12);
+INSERT INTO attraction VALUES (12, 7.8, 'British Museum', 50, 'Priceless treasures of history', 12);
+INSERT INTO attraction VALUES (13, 6.9, 'National Gallery', 40, 'Museum of art, painting and museum', 12);
+INSERT INTO attraction VALUES (14, 7.0, 'Lido', 30, 'Beach, lagoon and casino', 13);
+INSERT INTO attraction VALUES (15, 7.3, 'Teatro la Fenice', 50, 'Theater, opera, concert, opera and orchestra', 13);
+INSERT INTO attraction VALUES (16, 5.7, 'Museum of Glass', 10, 'Museum', 13);
+INSERT INTO attraction VALUES (17, 6.6, 'Palazzo Vecchio', 15, 'Fortified 13th-century palace',14);
+INSERT INTO attraction VALUES (18, 6.9, 'David', 10, 'Michelangelo, sculpture and David', 14);
+INSERT INTO attraction VALUES (19, 7.1, 'Boboli garden', 30, 'Garden, palace, Michelangelo and amphitheater', 14);
+INSERT INTO attraction VALUES (20, 7.5, 'Orsanmichele', 30, 'Church, museum, sculpture and chapel', 14);
+INSERT INTO attraction VALUES (21, 8.0, 'Madrid Royal Palace', 60, 'Palace with 2000 chambers, armory, garden',8);
+INSERT INTO attraction VALUES (22, 8.0, 'Estadio Santiago Bernabéu', 50, 'Concert, arena and museum', 8);
+INSERT INTO attraction VALUES (23, 9.0, 'Las Ventas', 80, 'Korrida, arena, concert, monument and flamenco', 8);
+INSERT INTO attraction VALUES (24, 8.5, 'Vincent van Gogh Museum', 60, 'The largest collection of Van Goghs works',16);
+INSERT INTO attraction VALUES (25, 8.1, 'Vondelpark', 40, 'An extensive park with an outdoor theater', 16);
+INSERT INTO attraction VALUES (26, 9.0, 'Madame Tussauds Amsterdam', 90, 'Wax office and museum', 16);
+INSERT INTO attraction VALUES (27, 8.6, 'De pijp', 30, 'Multicultural cuisine and Heineken Experience', 16);
+INSERT INTO attraction VALUES (28, 7.3, 'Hagia Sophia', 70, 'Museum in the Byzantine basilica', 17);
+INSERT INTO attraction VALUES (29, 8.1, 'Miniaturk', 50, 'Skansen', 17);
+INSERT INTO attraction VALUES (30, 9.3, 'Istanbul Aquarium', 100, 'Aquarium, penguins and shopping', 17);
+INSERT INTO attraction VALUES (31, 9.4, 'Athens Acropolis', 80, 'Temple on the hill from the fifth century BC', 18);
+INSERT INTO attraction VALUES (32, 8.9, 'Parthenon', 60, 'The ruins of the Athenian temple from the 5th century BC', 18);
+INSERT INTO attraction VALUES (33, 6.7, 'Acropolis Museum in Athens', 50, 'Ancient treasures in a modern museum', 18);
+INSERT INTO attraction VALUES (34, 7.1, 'Erechtheum', 30, 'Temple, Athena and ancient Greece', 18);
+INSERT INTO attraction VALUES (35, 9.0, 'Technopolis', 90, 'Museum, jazz, art, theater and music', 18);
+INSERT INTO attraction VALUES (36, 9.8, 'Tivoli Gardens', 160, 'A nineteenth-century amusement park with attractions', 19);
+INSERT INTO attraction VALUES (37, 6.0, 'Copenhagen Zoo', 20, 'Zoo', 19);
+INSERT INTO attraction VALUES (38, 7.6, 'The Kings Garden', 45, 'Garden and castle', 19);
+INSERT INTO attraction VALUES (39, 9.8, 'Bakken', 200, 'Amusement park, roller coaster and deer', 19);
+INSERT INTO attraction VALUES (40, 6.9, 'The Open Air Museum', 30, 'Open-air museum and museum', 19);
+INSERT INTO attraction VALUES (41, 6.7, 'Parque de Serralves', 20, 'Museum, art, garden, park and art deco', 20);
+INSERT INTO attraction VALUES (42, 8.0, 'Port Wine Museum', 30, 'Museum and wine', 20);
+INSERT INTO attraction VALUES (43, 6.0, 'Botanical Garden', 30, 'Garden', 2);
+INSERT INTO attraction VALUES (44, 8.2, 'Massif des Calanques', 80, 'Climbing and the cliff', 3);
+INSERT INTO attraction VALUES (45, 9.1, 'Paris Notre-Dame Cathedral', 100, 'Gothic church known from the novel', 4);
+INSERT INTO attraction VALUES (46, 7.5, 'Catacombs of Paris', 50, 'Concert, tomb and history', 4);
+INSERT INTO attraction VALUES (47, 7.4, 'Ankara Castle', 60, 'Castle, history, museum and architecture', 5);
+INSERT INTO attraction VALUES (48, 8.9, 'Aqualand Antalya Dolphinland', 130, 'Aquapark and dolphin', 7);
+INSERT INTO attraction VALUES (49, 8.8, 'Sagrada Familia', 60, 'A church designed by Gaudi', 9);
+INSERT INTO attraction VALUES (50, 7.8, 'Picasso Museum', 70, 'Museum, Pablo Picasso and painting', 9);
+INSERT INTO attraction VALUES (51, 8.3, 'Bar', 50, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (52, 5.9, 'Skatepark', 50, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (53, 1.4, 'Water bicycles', 40, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (54, 2.4, 'Airplane flight', 30, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (55, 4.8, 'Museum', 10, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (56, 4.8, 'Bungee', 20, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (57, 4.8, 'Parachute jump', 100, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (58, 5.3, 'Climbing', 20, 'Fun from morning to night', 21);
+INSERT INTO attraction VALUES (59, 9.1, 'Balloon flight', 50, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (60, 1.8, 'Cathedral', 80, 'Fun from morning to night', 21);
+INSERT INTO attraction VALUES (61, 1.1, 'Parachute jump', 100, 'Fun from morning to night', 21);
+INSERT INTO attraction VALUES (62, 9.1, 'Water scooters', 10, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (63, 1.4, 'Zoo', 80, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (64, 7.9, 'Airplane flight', 70, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (65, 7.1, 'Airplane flight', 70, 'Interesting views', 21);
+INSERT INTO attraction VALUES (66, 3.1, 'Parachute jump', 40, 'Interesting views', 21);
+INSERT INTO attraction VALUES (67, 3.9, 'Sculpture', 10, 'Fun from morning to night', 21);
+INSERT INTO attraction VALUES (68, 5.8, 'Rope park', 10, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (69, 6.8, 'Water scooters', 60, 'Interesting views', 21);
+INSERT INTO attraction VALUES (70, 5.3, 'Museum', 40, 'Fun from morning to night', 21);
+INSERT INTO attraction VALUES (71, 1.1, 'Rope park', 30, 'Interesting views', 21);
+INSERT INTO attraction VALUES (72, 7.1, 'Climbing', 30, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (73, 8.1, 'Aquapark', 100, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (74, 3.1, 'Airplane flight', 100, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (75, 5.4, 'Water bicycles', 80, 'Interesting views', 21);
+INSERT INTO attraction VALUES (76, 5.3, 'Cinema', 30, 'Interesting views', 21);
+INSERT INTO attraction VALUES (77, 2.8, 'Cathedral', 30, 'Fun from morning to night', 21);
+INSERT INTO attraction VALUES (78, 5.1, 'Airplane flight', 10, 'Interesting views', 21);
+INSERT INTO attraction VALUES (79, 1.3, 'Cathedral', 40, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (80, 1.9, 'Cinema', 50, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (81, 4.8, 'Zoo', 70, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (82, 3.5, 'Parachute jump', 70, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (83, 6.1, 'Cathedral', 70, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (84, 7.1, 'Parachute jump', 100, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (85, 4.8, 'Sculpture', 80, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (86, 2.9, 'Water scooters', 20, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (87, 1.4, 'Cathedral', 50, 'Interesting views', 21);
+INSERT INTO attraction VALUES (88, 9.3, 'Monuments', 30, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (89, 1.1, 'Waterpark', 10, 'Fun from morning to night', 21);
+INSERT INTO attraction VALUES (90, 2.8, 'Cinema', 20, 'Fun from morning to night', 21);
+INSERT INTO attraction VALUES (91, 8.1, 'Balloon flight', 100, 'Fun from morning to night', 21);
+INSERT INTO attraction VALUES (92, 7.8, 'Airplane flight', 20, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (93, 1.1, 'Balloon flight', 70, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (94, 5.8, 'Parachute jump', 50, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (95, 3.4, 'Zoo', 70, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (96, 6.9, 'Sculpture', 50, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (97, 3.3, 'Waterpark', 60, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (98, 2.1, 'Monuments', 10, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (99, 4.8,  'Water bicycles', 40, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (100, 4.1, 'Climbing', 60, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (101, 5.1, 'Climbing', 50, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (102, 1.9, 'Balloon flight', 100, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (103, 1.1, 'Cathedral', 70, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (104, 3.4, 'Rope park', 30, 'Interesting views', 21);
+INSERT INTO attraction VALUES (105, 6.1, 'Cathedral', 10, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (106, 7.3, 'Sculpture', 30, 'Interesting views', 21);
+INSERT INTO attraction VALUES (107, 7.8, 'Park', 70, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (108, 3.1, 'Bar', 60, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (109, 4.9, 'Parachute jump', 10, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (110, 6.4, 'Bungee', 50, 'Fun from morning to night', 21);
+INSERT INTO attraction VALUES (111, 6.6, 'Monuments', 60, 'Fun from morning to night', 21);
+INSERT INTO attraction VALUES (112, 1.5, 'Museum', 100, 'Interesting views', 21);
+INSERT INTO attraction VALUES (113, 3.4, 'Sculpture', 60, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (114, 8.1, 'Water scooters', 40, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (115, 6.3, 'Balloon flight', 50, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (116, 7.9, 'Bar', 40, 'Interesting views', 21);
+INSERT INTO attraction VALUES (117, 8.8, 'Water bicycles', 60, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (118, 1.8, 'Balloon flight', 100, 'Interesting views', 21);
+INSERT INTO attraction VALUES (119, 1.8, 'Climbing', 90, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (120, 6.4, 'Diving', 20, 'Fun from morning to night', 21);
+INSERT INTO attraction VALUES (121, 8.3, 'Bungee', 80, 'Fun from morning to night', 21);
+INSERT INTO attraction VALUES (122, 5.9, 'Aquapark', 10, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (123, 7.8, 'Aquapark', 10, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (124, 1.3, 'Park', 70, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (125, 3.8, 'Aquapark', 70, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (126, 3.8, 'Rope park', 40, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (127, 5.1, 'Waterpark', 40, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (128, 9.9, 'Bungee', 40, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (129, 9.1, 'Monuments', 10, 'A great attraction for the whole family', 21);
+INSERT INTO attraction VALUES (130, 1.1, 'Climbing', 80, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (131, 1.1, 'Monuments', 10, 'Interesting views', 21);
+INSERT INTO attraction VALUES (132, 1.9, 'Skatepark', 50, 'Fun from morning to night', 21);
+INSERT INTO attraction VALUES (133, 6.3, 'Bungee', 70, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (134, 1.9, 'Water bicycles', 20, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (135, 4.9, 'Water scooters', 100, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (136, 5.3, 'Airplane flight', 40, 'Interesting views', 21);
+INSERT INTO attraction VALUES (137, 6.1, 'Museum', 70, 'Interesting views', 21);
+INSERT INTO attraction VALUES (138, 8.1, 'Skatepark', 40, 'Fun from morning to night', 21);
+INSERT INTO attraction VALUES (139, 2.1, 'Waterpark', 20, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (140, 4.4, 'Cathedral', 30, 'Interesting views', 21);
+INSERT INTO attraction VALUES (141, 9.1, 'Skatepark', 60, 'Fun from morning to night', 21);
+INSERT INTO attraction VALUES (142, 9.3, 'Cinema', 70, 'Interesting views', 21);
+INSERT INTO attraction VALUES (143, 3.9, 'Zoo', 10, 'Interesting views', 21);
+INSERT INTO attraction VALUES (144, 2.9, 'Park', 100, 'Interesting views', 21);
+INSERT INTO attraction VALUES (145, 4.3, 'Cathedral', 10, 'Fun from morning to night', 21);
+INSERT INTO attraction VALUES (146, 5.9, 'Waterpark', 100, 'Fun from morning to night', 21);
+INSERT INTO attraction VALUES (147, 8.4, 'Balloon flight', 30, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (148, 3.9, 'Waterpark', 40, 'Lots of fun', 21);
+INSERT INTO attraction VALUES (149, 3.9, 'Skatepark', 90, 'Interesting views', 21);
+INSERT INTO attraction VALUES (150, 2.4, 'Climbing', 70, 'A great attraction for the whole family', 21);
